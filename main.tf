@@ -4,6 +4,10 @@ module "jx" {
   cluster_name = "jenkins-x-cluster"
 }
 
+output "jx_requirements" {
+  value = module.jx.jx_requirements
+}
+
 terraform {
   backend "gcs" {
     bucket = "jx-terraform-state-files"
